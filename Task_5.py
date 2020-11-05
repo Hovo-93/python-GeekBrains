@@ -4,9 +4,12 @@
 
 my_list = [7, 5, 3, 3, 2]
 el = int(input("Введите новый элемент рейтинга "))
-
+added = False
 for i in range(len(my_list)):
     if el > my_list[i]:
         my_list.insert(i, el)
+        added = True
         break
-print(list)
+if added == False:
+    my_list.append(el)
+print(my_list)

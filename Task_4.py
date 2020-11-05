@@ -4,7 +4,4 @@
 
 line = input('Введите слова, разделенные пробелами ').split()
 for i, value in enumerate(line):
-    if len(value) > 10:
-        print(i, value[:10])
-    else:
-        print(i, value)
+    print(i, value[:10])

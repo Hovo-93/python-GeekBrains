@@ -1,8 +1,12 @@
-"""1. Создать список и заполнить его элементами различных типов данных.
-Реализовать скрипт проверки типа данных каждого элемента. Использовать функцию type() для проверки типа.
- Элементы списка можно не запрашивать у пользователя, а указать явно, в программе."""
-array = []
-array.extend([1, 0.5, 'python', [1, 2, 3], print, {'name': 'Ivan', 'surname': 'Ivanov'},
-              True, None, ('user', 'manager')])
-for i, value in enumerate(array):
-    print(i, type(value))
+"""1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
+Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль."""
+
+
+def division(*args):
+    try:
+        arg1 = int(input('Input dividend '))
+        arg2 = int(input('Input divider '))
+        result = arg1 / arg2
+    except ZeroDivisionError:
+        return "You cannot divide by zero!"
+    return round(result)

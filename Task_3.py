@@ -1,14 +1,24 @@
-month = int(input("Введите месяц в виде целого числа от 1 до 12 "))
-if month > 12 or month < 1:
-    print('Error')
+"""3. Реализовать функцию my_func(), которая принимает три позиционных аргумента,
+ и возвращает сумму наибольших двух аргументов."""
 
-seasons = {
-    'Зима': [12, 1, 2],
-    'Весна': [3, 4, 5],
-    'Лето': [6, 7, 8],
-    'Осень': [9, 10, 11],
-}
 
-for key, value in seasons.items():
-    if month in value:
-        print(f"{month} месяц относится к {key}")
+def my_func(*args):
+    """
+    1-ое решение ))
+    """
+    args = input('Ввод чисел с пробелами ').split()
+    if len(args) > 3:
+        print('Error')
+        exit()
+    max = int(args[0])
+    mas = []
+    for i in range(len(args)):
+        if int(args[i]) > max:
+            max = int(args[i])
+            mas.append(int(max))
+    return (sum(mas))
+
+
+# 2 простое решение
+def my_func(var_1, var_2, var_3):
+    return (var_1 + var_2 + var_3) - min(var_1, var_2, var_3)

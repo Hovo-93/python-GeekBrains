@@ -5,21 +5,13 @@
 
 # 1
 def my_func(x, y):
-    x = int(input())
-    y = int(input())
     return x ** y
 
 
 # 2
-x = int(input('num? '))
-y = int(input('pow? '))
-try:
-    if x > 0 and y < 0:
-        def my_func(x, y):
-            r = 1
-            while (y > 0):
-                r *= x
-                y -= 1
-            return 'result:', r
-except:
-    print("Ошибочка")
+def my_func(x, y):
+    r = 1
+    while (y > 0):
+        r *= x
+        y -= 1
+    return 'result:', r

@@ -2,7 +2,9 @@
 но с прописной первой буквой. Например, print(int_func(‘text’)) -> Text."""
 
 
-def int_func():
-    arg = input('Ввод строк, разделенных пробелом ').split()
-    for arr in arg:
-        print(arr.title())
+def int_func(arg):
+    lst = ''.join(arg[0].upper() + arg[1:])
+    return lst
+
+
+print(int_func('text'))

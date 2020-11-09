@@ -2,10 +2,9 @@
 Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль."""
 
 
-def division(*args):
+def division(arg1, arg2):
     try:
-        arg1 = int(input('Input dividend '))
-        arg2 = int(input('Input divider '))
+
         result = arg1 / arg2
     except ZeroDivisionError:
         return "You cannot divide by zero!"

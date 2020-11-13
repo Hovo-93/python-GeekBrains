@@ -7,7 +7,7 @@ for el in fact(n). Функция отвечает за получение фа�
 def fact(n):
     factorial = 1
     for i in range(2, n + 1):
-        yield i
+        yield factorial
         factorial *= i
     yield factorial
 

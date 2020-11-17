@@ -3,10 +3,13 @@
 
 str_list = input("Введите текст разделяя пробелами ").split()
 
-with open("5file.txt", "w+") as file:
-    total = 0
+with open("5file.txt", "w") as file:
     for line in str_list:
         file.write(line + '\n')
-        arr = [int(line) for line in str_list]
-        total = sum(arr)
+
+
+with open("5file.txt", "r") as file:
+    total = 0
+    arr = [int(line) for line in str_list]
+    total = sum(arr)
     print(total)

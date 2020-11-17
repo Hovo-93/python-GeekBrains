@@ -1,0 +1,5 @@
+Ivanov 22000
+Makarov 55000
+Kodirov 70000
+Shafionov 15000
+Durassel 7000

@@ -13,9 +13,12 @@ class Road:
         self._thickness = 5
 
     def calc_the_mass(self):
-        mass = round((self._length * self._width * self._mas * self._thickness)/1000)
-        return f"Масса асфальта составляет: {mass} т"
+        mass = round((self._length * self._width * self._mas * self._thickness) / 1000)
+        return mass
+
+    def print(self):
+        return f"Масса асфальта составляет: {self.calc_the_mass()} т"
 
 
 a = Road(20, 5000)
-print(a.calc_the_mass())
+print(a.print())

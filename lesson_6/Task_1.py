@@ -10,7 +10,7 @@ import time
 
 
 class TrafficLight:
-    _color = ['Красный', 'Желтый', 'Зеленый']
+    __color = ['Красный', 'Желтый', 'Зеленый']
 
     def running(self):
         while True:

@@ -14,12 +14,10 @@ class Matrix:
                          for row in self.matrix)
 
     def __add__(self, other):
-        if isinstance(other, Matrix):
             A = np.array(self.matrix)
             B = np.array(other.matrix)
             C = A + B
             return Matrix(C)
-        raise NotImplemented
 
 
 a = Matrix([[1, 2], [3, 4], [5, 6]])

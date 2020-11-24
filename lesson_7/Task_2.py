@@ -14,20 +14,26 @@ class Clothes(ABC):
 
 class Coat(Clothes):
     def calc(self, V):
-        coat_res = round(V / (6.5 + 0.5))
-        return f'Расхода ткани для палто {coat_res}'
+        self.coat_res = round(V / (6.5 + 0.5))
+        return self.coat_res
+
+    def __str__(self):
+        return f'Площадь на пальто {self.coat_res}'
 
 
 class Costume(Clothes):
     def calc(self, H):
-        cost_res = 2 * H + 0.3
-        return f'Расхода ткани для костюма {cost_res}'
+        self.cost_res = 2 * H + 0.3
+        return self.cost_res
+
+    def __str__(self):
+        return f'Площадь на костюм {self.cost_res}'
 
 
 class Total(Clothes):
     def calc(self, V, H):
-        total_res = (round(V / 6.5 + 0.5)) + (2 * H + 0.3)
-        return f'Общий расход ткани {total_res}'
+        return str(f'Площадь общей ткани \n'
+                   f' {(V / 6.5 + 0.5) + (H * 2 + 0.3)}')
 
 
 a = Coat()
@@ -35,4 +41,4 @@ print(a.calc(42))
 b = Costume()
 print(b.calc(25))
 c = Total()
-print(c.calc(42, 175))
+print(c.calc(5, 6))

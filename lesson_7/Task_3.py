@@ -11,10 +11,16 @@ class Cell:
         return f'Результат операции {self.quantity * "*"}'
 
     def __add__(self, other):
-        return self.quantity + other.quantity
+        a = self.quantity
+        b = other.quantity
+        c = a + b
+        return c
 
     def __sub__(self, other):
-        return self.quantity - other.quantity
+        c_1 = self.quantity
+        c_2 = other.quantity
+        c_3 = c_1 - c_2
+        return c_3
 
     def __mul__(self, other):
         return self.quantity * other.quantity
@@ -23,7 +29,7 @@ class Cell:
         if self.quantity == 0:
             return "Делить на 0 нельзя"
         else:
-            return round(self.quantity // other.quantity)
+            return self.quantity // other.quantity
 
     def make_order(self, cells_in_row):
         row = ''
@@ -35,7 +41,7 @@ class Cell:
 
 cells1 = Cell(33)
 cells2 = Cell(9)
-print(cells1 * cells2)
-print(cells2 - cells1)
+print(cells1 + cells2)
+print(cells1 - cells2)
 print(cells1.make_order(10))
 print(cells1 / cells2)

@@ -14,13 +14,13 @@ class Cell:
         a = self.quantity
         b = other.quantity
         c = a + b
-        return c
+        return Cell(c)
 
     def __sub__(self, other):
         c_1 = self.quantity
         c_2 = other.quantity
         c_3 = c_1 - c_2
-        return c_3
+        return Cell(c_3)
 
     def __mul__(self, other):
         return self.quantity * other.quantity
